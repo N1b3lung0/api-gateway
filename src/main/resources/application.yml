@@ -8,3 +8,20 @@ spring:
           issuer-uri: http://localhost:8181/realms/spring-microservices-realm
 server:
   port: 9000
+springdoc:
+  api-docs:
+    path: /api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    urls[0]:
+      name: Product Service
+      url: /aggregate/product-service/v3/api-docs
+    urls[1]:
+      name: Order Service
+      url: /aggregate/order-service/v3/api-docs
+    urls[2]:
+      name: Inventory Service
+      url: /aggregate/inventory-service/v3/api-docs
+
